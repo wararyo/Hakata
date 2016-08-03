@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LoadLevel : MonoBehaviour {
+public class LevelLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
