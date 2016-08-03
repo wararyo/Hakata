@@ -79,3 +79,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+#===
+# Custom
+#===
+
+.wav
+.jpg
