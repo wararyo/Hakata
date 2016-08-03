@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/stage01.unity
   - enabled: 1
     path: Assets/stage02.unity
+  - enabled: 1
+    path: Assets/stage03.unity
+  - enabled: 1
+    path: Assets/Congratulation.unity

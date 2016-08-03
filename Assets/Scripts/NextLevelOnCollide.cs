@@ -7,6 +7,8 @@ public class NextLevelOnCollide : MonoBehaviour {
     public string Tag;
     public PlayerFollower playerFollower;
 
+    private bool clearFlag = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,12 +21,16 @@ public class NextLevelOnCollide : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.CompareTag(Tag))
+        if (col.gameObject.CompareTag(Tag) && !clearFlag)
+        {
+            clearFlag = true;
             Invoke("DelayMethod", 3);
+        }
     }
 
     void DelayMethod()
     {
         LL.CurrentLevel++;
+        clearFlag = false;
     }
 }

@@ -187,6 +187,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010662142148, guid: d516908fc7304af4e95d0f7258c7e09a, type: 2}
+      propertyPath: m_TagString
+      value: FinalHakata
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012390348222, guid: d516908fc7304af4e95d0f7258c7e09a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d516908fc7304af4e95d0f7258c7e09a, type: 2}
