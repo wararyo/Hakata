@@ -347,7 +347,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9955646, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -356,7 +356,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.756
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -398,6 +398,7 @@ GameObject:
   - 23: {fileID: 674077262}
   - 54: {fileID: 674077266}
   - 114: {fileID: 674077267}
+  - 114: {fileID: 674077268}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -493,8 +494,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 8
+  jumpForce: 7
   minJumpSpan: 30
+--- !u!114 &674077268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674077261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734fc427f74264aecac1bebc5c738f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visibleObject: {fileID: 125510125}
+  tag: Hakata
 --- !u!1 &903716254
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +782,7 @@ MonoBehaviour:
   defaultAngle: 30
   defaultY: 0
   maxAngle: 80
-  minAngle: 10
+  minAngle: 0
 --- !u!1 &1896254014
 GameObject:
   m_ObjectHideFlags: 0

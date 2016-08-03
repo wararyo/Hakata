@@ -4,6 +4,7 @@ using System.Collections;
 public class VisibleOnCollide : MonoBehaviour {
 
 	public GameObject visibleObject;
+    public string tag;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class VisibleOnCollide : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		visibleObject.SetActive (true);
+        if(tag=="" || col.gameObject.CompareTag(tag))
+		    visibleObject.SetActive (true);
 	}
 }
