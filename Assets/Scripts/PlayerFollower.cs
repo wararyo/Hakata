@@ -64,6 +64,9 @@ public class PlayerFollower : MonoBehaviour
             cursorIsLocked = false;
         }
 
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        distance += scroll * 4;
+
         if (cursorIsLocked)
         {
             y += Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
