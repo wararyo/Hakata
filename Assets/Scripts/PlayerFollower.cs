@@ -33,6 +33,12 @@ public class PlayerFollower : MonoBehaviour
         }
     }
 
+    public void ResetCamera()
+    {
+        y = 0;
+        angle = 0;
+    }
+
     void Start()
     {
         y = defaultY;
@@ -88,4 +94,5 @@ public class PlayerFollower : MonoBehaviour
         );*/
         cameraTransform.LookAt(lookAt.GetComponent<Transform>().position);
     }
+
 }
