@@ -53,6 +53,7 @@ public class LevelLoader : MonoBehaviour {
     {
         clear.SetActive(false);
         player.transform.position = new Vector3(0,5,0);
-        playerFollower.ResetCamera();
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+        playerFollower.ResetCamera(); 
     }
 }

@@ -28,7 +28,7 @@ public class NextLevelOnCollide : MonoBehaviour {
         }
     }
 
-    void DelayMethod()
+    public void DelayMethod()
     {
         LL.CurrentLevel++;
         clearFlag = false;

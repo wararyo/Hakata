@@ -4,8 +4,10 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 10;
-	public float jumpForce = 100;
+	public float jumpVelocity = 4;
     public int minJumpSpan = 30;
+
+    public LevelLoader LL;
 
     private Camera camera;
 
@@ -14,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         var rb = GetComponent<Rigidbody>();
-        rb.maxAngularVelocity = 100;
+        rb.maxAngularVelocity = 12;
         jumpCount = minJumpSpan;
         camera = Camera.main;
     }
@@ -25,6 +27,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+        if (Input.GetKeyDown(KeyCode.L)) LL.CurrentLevel++;
+
 		float x = Input.GetAxis ("Horizontal");
 		float z = Input.GetAxis ("Vertical");
 
@@ -44,7 +48,11 @@ public class PlayerController : MonoBehaviour {
 		bool y = Input.GetKey(KeyCode.Space);
         if (y && (jumpCount >= minJumpSpan))
         {
-            rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
+            //rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
+            Vector3 v = rb.velocity;
+            v.y = jumpVelocity;
+            rb.velocity = v;
+
             jumpCount = 0;
         }
 
